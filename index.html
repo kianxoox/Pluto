@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluto Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        #main-container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Facts about Pluto</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const factsContainer = document.getElementById('facts-container');
+            const plutoFacts = {
+                "Discovery": "Pluto was discovered on February 18, 1930, by Clyde Tombaugh at the Lowell Observatory in Flagstaff, Arizona.",
+                "Classification": "In 2006, the International Astronomical Union (IAU) reclassified Pluto as a 'dwarf planet' because it does not clear its orbit of other debris.",
+                "Orbit": "Pluto's orbit is highly elliptical, taking it from 30 to 49 astronomical units (AU) from the Sun. One AU is the distance from the Earth to the Sun.",
+                "Size": "Pluto is only about 2,377 kilometers in diameter, making it about 18% the size of Earth and smaller than Earth's moon.",
+                "Moons": "Pluto has five known moons: Charon, Styx, Nix, Kerberos, and Hydra. Charon, the largest, is so big relative to Pluto that they are sometimes considered a double dwarf planet system.",
+                "Surface": "The surface of Pluto is composed of nitrogen ice, methane ice, and carbon monoxide ice. It has mountains, valleys, plains, and craters.",
+                "Atmosphere": "Pluto has a thin atmosphere of nitrogen, methane, and carbon monoxide, which expands when it comes closer to the Sun and collapses as it moves away.",
+                "Temperature": "Pluto's surface temperature can be as low as about -229 degrees Celsius (-380 degrees Fahrenheit), making it one of the coldest places in the solar system.",
+                "Rotation": "Pluto has a rotation period of about 6.4 Earth days and it rotates in the opposite direction of most planets in the solar system, a retrograde rotation.",
+                "New Horizons Mission": "In July 2015, NASA's New Horizons spacecraft made a historic flyby of Pluto, providing the most detailed images and data ever collected about the dwarf planet and its moons."
+            };
+
+            for (const [key, value] of Object.entries(plutoFacts)) {
+                const factElement = document.createElement('p');
+                factElement.textContent = `${key}: ${value}`;
+                factsContainer.appendChild(factElement);
+            }
+        });
+    </script>
+</body>
+</html>
